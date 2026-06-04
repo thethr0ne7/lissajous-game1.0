@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Lissajous Dream</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <button id="toggle-controls" aria-label="Toggle controls">✦</button>
+
+  <div id="controls-panel">
+    <div class="panel-section">
+      <div class="slider-row">
+        <label for="speed">Speed</label>
+        <input type="range" id="speed" min="0.05" max="2" step="0.01" value="0.5">
+      </div>
+      <div class="slider-row">
+        <label for="amplitude">Amplitude</label>
+        <input type="range" id="amplitude" min="50" max="350" step="1" value="200">
+      </div>
+      <div class="slider-row">
+        <label for="trail">Trail</label>
+        <input type="range" id="trail" min="0" max="0.95" step="0.01" value="0.7">
+      </div>
+      <div class="slider-row">
+        <label for="glow">Glow</label>
+        <input type="range" id="glow" min="0" max="50" step="1" value="15">
+      </div>
+      <div class="slider-row">
+        <label for="thickness">Thickness</label>
+        <input type="range" id="thickness" min="0.5" max="5" step="0.1" value="2">
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <div class="color-group">
+        <button class="color-btn active" data-mode="rainbow">Rainbow</button>
+        <button class="color-btn" data-mode="ocean">Ocean</button>
+        <button class="color-btn" data-mode="sunset">Sunset</button>
+        <button class="color-btn" data-mode="monochrome">Mono</button>
+      </div>
+    </div>
+
+    <div class="panel-section panel-actions">
+      <button id="random-harmony">Random Harmony</button>
+      <button id="toggle-rotation">Rotation: ON</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
